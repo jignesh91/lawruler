@@ -456,7 +456,133 @@ function getValidEnumValue(enumType, keyOrValue)
  **/
 function goToNextStep(wizard, options, state)
 {
-    return paginationClick(wizard, options, state, increaseCurrentIndexBy(state, 1));
+    var form = $("#wizard");
+
+    jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, "");
+        return this.optional(element) || phone_number.length > 9 && 
+        phone_number.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+    }, "Please specify a valid phone number");
+
+          form.validate({
+                
+            rules: {
+                FullName:{
+                    required: true,
+                },CellPhone:{
+                    required: true,
+                },BusinessPhone:{
+                    required: true,
+                },HomePhone:{
+                    required: true,
+                },Mailing_Address_1:{
+                    required: true,
+                },City:{
+                    required: true,
+                },State:{
+                    required: true,
+                },Zip:{
+                    required: true,
+                },DOB:{
+                    required: true,
+                },SSN:{
+                    required: true,
+                },custom597:{
+                    required: true,
+                },custom598:{
+                    required: true,
+                },custom599:{
+                    required: true,
+                },custom600:{
+                    required: true,
+                },custom601:{
+                    required: true,
+                },custom602:{
+                    required: true,
+                },custom603:{
+                    required: true,
+                },custom604:{
+                    required: true,
+                },custom605:{
+                    required: true,
+                },custom606:{
+                    required: true,
+                },custom607:{
+                    required: true,
+                },custom608:{
+                    required: true,
+                },custom609:{
+                    required: true,
+                },custom610:{
+                    required: true,
+                },custom611:{
+                    required: true,
+                },custom612:{
+                    required: true,
+                },custom613:{
+                    required: true,
+                },custom614:{
+                    required: true,
+                },custom615:{
+                    required: true,
+                },custom616:{
+                    required: true,
+                },custom617:{
+                    required: true,
+                },custom618:{
+                    required: true,
+                },custom619:{
+                    required: true,
+                },custom620:{
+                    required: true,
+                },custom621:{
+                    required: true,
+                },custom622:{
+                    required: true,
+                },custom623:{
+                    required: true,
+                },custom624:{
+                    required: true,
+                },custom625:{
+                    required: true,
+                },custom633:{
+                    required: true,
+                },custom626:{
+                    required: true,
+                },custom627:{
+                    required: true,
+                },custom628:{
+                    required: true,
+                },custom629:{
+                    required: true,
+                },custom630:{
+                    required: true,
+                },custom631:{
+                    required: true,
+                },custom632:{
+                    required: true,
+                },custom634:{
+                    required: true,
+                },custom635:{
+                    required: true,
+                },custom636:{
+                    required: true,
+                },custom637:{
+                    required: true,
+                },custom638:{
+                    required: true,
+                },custom639:{
+                    required: true,
+                },custom640:{
+                    required: true,
+                },custom641:{
+                    required: true,
+                },
+            },
+          });
+    if (form.valid() === true) {
+        return paginationClick(wizard, options, state, increaseCurrentIndexBy(state, 1));
+    }
 }
 
 /**
@@ -1936,7 +2062,179 @@ var defaults = $.fn.steps.defaults = {
      * @default function (event, currentIndex) { }
      * @for defaults
      **/
-    onFinished: function (event, currentIndex) { },
+    onFinished: function (event, currentIndex) {
+
+        var form = $("#wizard");
+
+    jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, "");
+        return this.optional(element) || phone_number.length > 9 && 
+        phone_number.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+    }, "Please specify a valid phone number");
+
+          form.validate({
+                
+            rules: {
+                FullName:{
+                    required: true,
+                },CellPhone:{
+                    required: true,
+                },BusinessPhone:{
+                    required: true,
+                },HomePhone:{
+                    required: true,
+                },Mailing_Address_1:{
+                    required: true,
+                },City:{
+                    required: true,
+                },State:{
+                    required: true,
+                },Zip:{
+                    required: true,
+                },DOB:{
+                    required: true,
+                },SSN:{
+                    required: true,
+                },custom597:{
+                    required: true,
+                },custom598:{
+                    required: true,
+                },custom599:{
+                    required: true,
+                },custom600:{
+                    required: true,
+                },custom601:{
+                    required: true,
+                },custom602:{
+                    required: true,
+                },custom603:{
+                    required: true,
+                },custom604:{
+                    required: true,
+                },custom605:{
+                    required: true,
+                },custom606:{
+                    required: true,
+                },custom607:{
+                    required: true,
+                },custom608:{
+                    required: true,
+                },custom609:{
+                    required: true,
+                },custom610:{
+                    required: true,
+                },custom611:{
+                    required: true,
+                },custom612:{
+                    required: true,
+                },custom613:{
+                    required: true,
+                },custom614:{
+                    required: true,
+                },custom615:{
+                    required: true,
+                },custom616:{
+                    required: true,
+                },custom617:{
+                    required: true,
+                },custom618:{
+                    required: true,
+                },custom619:{
+                    required: true,
+                },custom620:{
+                    required: true,
+                },custom621:{
+                    required: true,
+                },custom622:{
+                    required: true,
+                },custom623:{
+                    required: true,
+                },custom624:{
+                    required: true,
+                },custom625:{
+                    required: true,
+                },custom633:{
+                    required: true,
+                },custom626:{
+                    required: true,
+                },custom627:{
+                    required: true,
+                },custom628:{
+                    required: true,
+                },custom629:{
+                    required: true,
+                },custom630:{
+                    required: true,
+                },custom631:{
+                    required: true,
+                },custom632:{
+                    required: true,
+                },custom634:{
+                    required: true,
+                },custom635:{
+                    required: true,
+                },custom636:{
+                    required: true,
+                },custom637:{
+                    required: true,
+                },custom638:{
+                    required: true,
+                },custom639:{
+                    required: true,
+                },custom640:{
+                    required: true,
+                },custom641:{
+                    required: true,
+                },
+            },
+          });
+        if (form.valid() === true) {
+            var protocol = window.location.protocol;
+            var host = window.location.host;
+            var base_url = protocol + '//' + host + '/';
+
+            var data = $("#wizard").serialize();
+
+            var filter_result_tbl = '';
+            
+            if (data)
+            {
+                $('#AjaxLoaderDiv').fadeIn('slow');
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: "POST",
+                    url: base_url+'add-form',
+                    data: new FormData(document.getElementById("wizard")),
+                    contentType: false,
+                    processData: false,
+                    enctype: 'multipart/form-data',
+                    success: function (result)
+                    {
+                        $('#AjaxLoaderDiv').fadeOut('slow');
+                        
+                        if (result.status == 1) {
+                            // +result.data.message
+                            $.bootstrapGrowl(result.msg, {type: 'success', delay: 4000});
+                                window.setTimeout(function(){
+                                        window.location = "/";
+                                    }, 5000);
+
+                        } else {
+                            $.bootstrapGrowl(result.msg, {type: 'danger', delay: 4000});
+                        }
+                    },
+                    error: function (error)
+                    {
+                        $('#AjaxLoaderDiv').fadeOut('slow');
+                        $.bootstrapGrowl("Something went wrong !", {type: 'danger', delay: 4000});
+                    }
+                });
+            }
+            return false;
+        }
+    },
 
     /**
      * Fires after async content is loaded. 

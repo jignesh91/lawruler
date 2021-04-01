@@ -43,20 +43,20 @@ img {
   max-width: 100%; }
 
 .wrapper {
-  height: 100vh;
+  padding: 60px;
   background: #f9f6f1;
   display: flex;
   align-items: center;
   justify-content: center; }
 
 .wizard {
-  width: 920px;
+  width: 1190px;
   position: relative; }
 
 .wizard > .steps {
   position: absolute;
-  top: 27.44%;
-  right: 30%;
+  top: 21%;
+  right: 35%;
   transform: translateX(50%);
   z-index: 9; }
 
@@ -64,6 +64,7 @@ img {
   display: none; }
 
 .wizard > .steps ul {
+  /*display: none;*/
   display: flex;
   justify-content: center; }
 
@@ -123,7 +124,7 @@ img {
   height: 521px; }
 
 .form-content {
-  width: 60%;
+  width: 85%;
   padding-top: 65px;
   padding-left: 51px;
   padding-right: 51px; }
@@ -230,7 +231,7 @@ textarea.form-control {
 
 .actions {
   position: absolute;
-  bottom: 55px;
+  bottom: 10px;
   right: 51px; }
   .actions ul {
     display: flex; }
@@ -265,7 +266,7 @@ textarea.form-control {
       left: 26px;
       font-family: Material-Design-Iconic-Font; }
   .actions li:nth-child(2) a, .actions li:last-child a {
-    margin-left: 20px; }
+    margin-left: 10px; }
   .actions li:last-child a {
     width: 124px;
     background: #6d7f52;
@@ -367,8 +368,11 @@ textarea.form-control {
     max-width: 768px; }
 
   .image-holder img {
-    height: 521px;
-    object-fit: cover; } }
+    height: 420px;
+    object-fit: cover; } 
+    .wizard > .steps li a:before, .wizard > .steps li a:after {content: none;}
+    .wizard > .steps li a {margin-right: 15px !important;}
+}
 @media (max-width: 767px) {
   .inner {
     display: block;
@@ -395,7 +399,8 @@ textarea.form-control {
       margin-bottom: 18px; }
 
   .wrapper {
-    height: 1201px;
+    /*height: 1201px;*/
+    padding: 0px;
     background: none; }
 
   .checkbox-circle {
@@ -405,12 +410,121 @@ textarea.form-control {
     height: 100%; }
     .wizard > .steps {
       right: 50%;
-      top: 52%;
+      top: 35%;
       transform: translateX(50%); }
 
   .actions {
     right: 50%;
-    transform: translateX(50%);
-    bottom: 3%; } }
+    display: flex;
+    justify-content: flex-end;
+        margin: -70px 20px 0 0;
+        position: static;
+    bottom: 0%; } 
+    .wizard > .content { height: auto !important; }
+    .wizard > .steps li a:before, .wizard > .steps li a:after {content: none;}
+    .wizard > .steps li a {margin-right: 15px !important;}
+
+     .image-holder{
+    display: inline-block;
+      text-align: center;
+      height: 160px;
+  }
+  .image-holder img {
+      width: auto;
+      height: 200px;
+      margin: 0 auto;
+      object-fit: unset;
+  }   
+}
 
 /*# sourceMappingURL=style.css.map */
+label.error {
+    color: red;
+}
+
+/*growl*/
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.bootstrap-growl.alert.alert-danger.alert-dismissible {
+    position: fixed;
+    margin: 0px;
+    z-index: 9999;
+    top: 20px;
+    width: 250px;
+    right: 20px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+/**/
+.wizard > .content{
+  height: 670px;
+  background: #fff;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.wizard > .content .inner{
+  padding: 0 0 70px;
+  box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+}
